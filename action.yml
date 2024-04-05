@@ -1,0 +1,17 @@
+name: '.NET Docker Action Template'
+description: 'A Github action template for a dotnet docker action'
+branding:
+  icon: sliders
+  color: orange
+inputs:
+  example-input:
+    description: 'An example input'
+    required: false
+outputs:
+  example-output:
+    description: 'An example output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.example-input }}

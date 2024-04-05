@@ -1,0 +1,25 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# NuGet packages
+*.nuget.props
+*.nuget.targets
+
+# GitHub Actions artifacts
+**/bin/
+**/obj/
+**/*.suo
+**/*.user
+**/*.sln.docstates
+**/*.nuget.props
+**/*.nuget.targets
+
+# Mono
+.mono

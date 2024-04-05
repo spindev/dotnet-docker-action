@@ -1,0 +1,21 @@
+name: Test
+
+on: workflow_dispatch
+
+env:
+  EXAMPLE_VALUE: example-value
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        id: dotnet-action
+        with:
+          example-input: ${{ env.EXAMPLE_VALUE}}
+      - uses: nick-fields/assert-action@v1
+        with:
+          expected: ${{ env.EXAMPLE_VALUE }}
+          actual: ${{ steps.dotnet-action.outputs.example-output }}
+          comparison: exact
